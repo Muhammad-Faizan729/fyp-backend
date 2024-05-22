@@ -18,7 +18,14 @@ app.use(bodyParser.json());
 
 // Chat-GPT
 // CORS Middleware
-app.use(cors()); // Allow all origins. For production, you may want to configure CORS options.
+// app.use(cors()); // Allow all origins. For production, you may want to configure CORS options.
+app.use(
+  cors({
+    origin: ["https://fyp-back.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 // Routes Middleware
 app.use("/api/users", userRoute);

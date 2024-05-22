@@ -26,7 +26,7 @@ app.use(cors()); // Allow all origins. For production, you may want to configure
 //     credentials: true,
 //   })
 // );
-
+console.log("hello ");
 // Routes Middleware
 app.use("/api/users", userRoute);
 
